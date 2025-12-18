@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>sarees collections</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="main-container">
+    <h1 class="main-title">Explore the beauty of traditional Indian sarees</h1>
+    
+    <div class="form-container">
+      <!-- Login Form -->
+      <div id="login" class="form-section">
+        <form>
+          <label for="login-username">Username</label>
+          <input type="text" id="login-username" required>
+
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" required>
+          <button type="button" onclick="window.location.href='sare.html'" style="padding: 10px 20px;margin-top: 25px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Login</button>
+        </form>
+      </div>
+
+      <!-- Register Form -->
+      <div id="register" class="form-section" style="display:none;">
+        <form>
+          <label for="register-username">Choose a Username</label>
+          <input type="text" id="register-username" required>
+
+          <label for="register-password">Choose a Password</label>
+          <input type="password" id="register-password" required>
+
+          <button type="submit">Register</button>
+        </form>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="tab-buttons">
+        <button class="blue-btn" onclick="showForm('register')">Register</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showForm(formId) {
+      document.getElementById('login').style.display = formId === 'login' ? 'block' : 'none';
+      document.getElementById('register').style.display = formId === 'register' ? 'block' : 'none';
+    }
+  </script>
+  
+  <script>
+    function loginUser() {
+      // Get values (you can add validation/auth here)
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Dummy check – replace with real auth if needed
+      if (username && password) {
+        window.location.href = "sare.html"; // Redirect
+      } else {
+        alert("Please enter username and password");
+      }
+
+      return false; // Prevent actual form submission
+    }
+  </script>
+</body>
+</html>

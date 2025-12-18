@@ -1,0 +1,99 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('login.png') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+/* Main wrapper */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+/* Title styling */
+.main-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Form container styling */
+.form-container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Individual form section */
+.form-section {
+  display: none;
+}
+
+/* Show the visible form */
+.form-section:target,
+.form-section:first-of-type {
+  display: block;
+}
+
+/* Form structure */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels and inputs */
+label {
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+
+input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Submit buttons */
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Navigation buttons (Login/Register) */
+.tab-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+}
+
+.tab-buttons button {
+  background-color: #ffffff33;
+  border: 1px solid white;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
